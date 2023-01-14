@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#9d4edd">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- google fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Crimson+Pro:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Manrope:200,300,regular,500,600,700,800" rel="stylesheet" />
+</head>
+
+<body>
+    <h1>Get Started Now</h1>
+    <section class="form">
+        <form class="form-grp">
+            <h2>Join Me Now</h2>
+            <h3>Enter email and password to continue</h3>
+            <div class="input-grp">
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-grp">
+                <input type="text" placeholder="Password" id="pass">
+                <img src="eye-open-svgrepo-com.svg" alt="" id="eye" style="cursor: pointer;">
+            </div>
+            <button class="btn">Create Account</button>
+            <div class="continue">
+                <div class="line"></div>
+                <p>Or Continue With</p>
+                <div class="line"></div>
+            </div>
+            <div class="social-links">
+                <div class="links">
+                    <img src="g1.svg" alt="">
+                    <p>Google</p>
+                </div>
+                <div class="links">
+                    <img src="facebook-svgrepo-com.svg" alt="">
+                    <p>Facebook</p>
+                </div>
+                <div class="links">
+                    <img src="github-svgrepo-com.svg" alt="">
+                    <p>Github</p>
+                </div>
+            </div>
+            <p class="last-line">Already have an account? <span class="purple">Login Here</span></p>
+        </form>
+    </section>
+
+    <script>
+        const eye = document.getElementById('eye');
+        const pass = document.getElementById('pass')
+        eye.addEventListener("click", () => {
+            if (pass.type == "text") {
+                pass.type = "password"
+                eye.src = "eye-closed-svgrepo-com.svg"
+            } else {
+                pass.type = "text"
+                eye.src = "eye-open-svgrepo-com.svg"
+            }
+        })
+    </script>
+</body>
+
+</html>
